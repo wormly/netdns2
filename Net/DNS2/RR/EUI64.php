@@ -113,7 +113,7 @@ class Net_DNS2_RR_EUI64 extends Net_DNS2_RR
         // make sure they're all hex values
         //
         foreach ($a as $i) {
-            if (ctype_xdigit($i) == false) {
+            if (Net_DNS2_Polyfill::ctype_xdigit($i) == false) {
                 return false;
             }
         }
